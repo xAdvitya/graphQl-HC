@@ -8,9 +8,9 @@ type Course {
     category: String
     price: Int
     language:String
-    email:string
+    email:String
     stack:Stack
-    teachingAssist:[TeachinfAssist]
+    teachingAssist:[TeachingAssist]
 
 }
 
@@ -35,12 +35,12 @@ input CourseInput{
     category: String
     price: Int!
     language:String
-    email:string
+    email:String
     stack:Stack
-    teachingAssist:[TeachinfAssist]!
+    teachingAssist:[TeachingAssistInput]!
 }
 
-input TeachingAssist{
+input TeachingAssistInput{
 
     firstName:String
     lastName:String
@@ -51,7 +51,6 @@ input TeachingAssist{
 type Mutation {
     createCourse(input:CourseInput): Course
 } 
-
 `
 );
 
