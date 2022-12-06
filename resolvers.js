@@ -1,6 +1,5 @@
 // import { nanoid } from 'nanoid';
 
-
 class Course {
   constructor(
     id,
@@ -27,7 +26,7 @@ const resolvers = {
     let id = nanoid();
     courseholde[id] = input;
     return new Course(id, input);
-  }
+  },
 };
 
 export default resolvers;
